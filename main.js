@@ -43,10 +43,6 @@ var nodeConsole = require('console');
 var myConsole = new nodeConsole.Console(process.stdout, process.stderr);
 myConsole.log('Hello World!');
 
-function writeToBrowser(text) {
-    document.write("<p>" + text + "</p>");
-}
-
 console.log("Test");
 
 var pop3Client = require("poplib");
