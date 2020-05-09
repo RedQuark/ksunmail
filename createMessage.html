@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <title>New Message</title>
+  <link rel="stylesheet" type="text/css" href="createMessage.css">
+</head>
+<body>
+    <dialog open>
+        <form method="dialog">
+            <div>
+                <label for="to">To: </label>
+                <input type="email" name="to" id="to" required />
+            </div>
+            <div>
+                <label class="message" for="message">Message: </label>
+                <textarea class="message" name="message" id="message" rows="30" cols="80" required></textarea>
+            </div>
+            <input type="submit" name="send" id="send" value="Send" />
+        </form>
+    </dialog>
+</body>

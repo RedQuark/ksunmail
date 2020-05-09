@@ -6,49 +6,55 @@
   <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
   <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-  <title>Hello World!</title>
+  <title>KsunMail</title>
 </head>
 
 <body>
-  <h1>Hello World!</h1>
+  <h1>KsunMail Client</h1>
+  Version 0.2 - May 9, 2020
   We are using Node.js <span id="node-version"></span>,
   Chromium <span id="chrome-version"></span>,
   and Electron <span id="electron-version"></span>.
 
-  <form>
-    <div>
-      <label for="port">Port: </label>
-      <input type="number" name="port" id="port" required />
-    </div>
-    <div>
-      <label for="host">Host: </label>
-      <input type="text" name="host" id="host" required />
-    </div>
-    <div>
-      <label for="username">Username: </label>
-      <input type="text" name="username" id="username" required />
-    </div>
-    <div>
-      <label for="password">Password: </label>
-      <input type="password" name="password" id="password" required />
-    </div>
-    <fieldset>
-      <legend>Options</legend>
+  <dialog open>
+    <form method="dialog">
       <div>
-        <input type="checkbox" name="tlserrs" id="tlserrs" />
-        <label for="tlserrs">TLS Errors</label>
+        <label for="port">Port: </label>
+        <input type="number" name="port" id="port" required />
       </div>
       <div>
-        <input type="checkbox" name="enabletls" id="enabletls" />
-        <label for="enabletls">Enable TLS</label>
+        <label for="host">Host: </label>
+        <input type="text" name="host" id="host" required />
       </div>
       <div>
-        <input type="checkbox" name="debug" id="debug" />
-        <label for="debug">Debug</label>
+        <label for="username">Username: </label>
+        <input type="text" name="username" id="username" required />
       </div>
-    </fieldset>
-    <input type="button" name="submit" id="submit" formmethod="dialog" value="Submit" />
-  </form>
+      <div>
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" required />
+      </div>
+      <fieldset>
+        <legend>Options</legend>
+        <div>
+          <input type="checkbox" name="tlserrs" id="tlserrs" />
+          <label for="tlserrs">TLS Errors</label>
+        </div>
+        <div>
+          <input type="checkbox" name="enabletls" id="enabletls" />
+          <label for="enabletls">Enable TLS</label>
+        </div>
+        <div>
+          <input type="checkbox" name="debug" id="debug" />
+          <label for="debug">Debug</label>
+        </div>
+      </fieldset>
+      <input type="submit" name="submit" id="submit" value="Submit" />
+    </form>
+    </dialog>
+    <div>
+      <a href="createMessage.html">Create Message</a>
+    </div>
 
   <!-- You can also require other files to run in this process -->
   <script src="./renderer.js"></script>
